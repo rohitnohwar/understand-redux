@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { changeValue } from './features/counter/counterSlice.js'
+import { changeValue, addValue } from './features/counter/counterSlice.js'
 import "./B.css"
 
 function B () {
@@ -18,8 +18,8 @@ function B () {
                 onChange={(e)=>dispatch(changeValue(e.target.value))}
                 value={value}
             >
-
             </input>
+            <button onClick={()=>{dispatch(addValue())}}>AddValue</button>
         </div>);
 }
 

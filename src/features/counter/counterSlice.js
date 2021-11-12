@@ -8,11 +8,14 @@ export const counterSlice = createSlice({
   reducers: {
     changeValue: (state, action) => {
         state.value = action.payload
-      }
+    },
+    addValue: state => {
+      state.value += "f"
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { changeValue } = counterSlice.actions
+export const { changeValue, addValue } = counterSlice.actions
 
 export default counterSlice.reducer
